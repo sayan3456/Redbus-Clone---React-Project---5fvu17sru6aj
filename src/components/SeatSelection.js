@@ -22,12 +22,12 @@ const SeatSelection = () => {
 
     return (
         <div>
-            <Container className='bg-danger'>
+            <Container className='background'>
                 {[1, 2, 3].map((seatRow, i) => {
                     return (
-                        <div className={`row d-flex justify-content-center m-0 mw-100 p-4 mt-${Math.ceil(seatRow * 1.5)}`} key={seatRow}>
+                        <div id='name' className={`row d-flex justify-content-center m-0 mw-100 p-4 mt-${Math.ceil(seatRow * 1.5)}`} key={seatRow}>
                             {[1, 2, 3, 4, 5, 6, 7, 8].map((seat, j) => {
-                                return <div className={`seat ${selectedSeat.includes(seatNum(i, j)) ? 'bg-success' : ""}`}
+                                return <div className= {`seat ${selectedSeat.includes(seatNum(i, j)) ? 'bg-success' : ""}`}
                                     key={8 * i + j}
                                     onClick={
                                         () => {

@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+.suggestionModal{
+  background-color: wheat;
+  border-radius: 5px;
+  height: max-content;
+  position: fixed;
+}
+.suggestionModal p{
+  text-align: center;
+  padding: 10px;
+  margin: 0px;
+  cursor: pointer;
+}

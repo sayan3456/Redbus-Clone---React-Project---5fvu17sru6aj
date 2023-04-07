@@ -1,0 +1,17 @@
+.map{
+    background-color: rgb(232, 84, 84);
+    width: 25px;
+    height: 25px;
+    border: 2px solid red;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.map-sc{
+    height: 150px;
+    background-color: rgb(134, 136, 138);
+    border: 2px solid rgb(9, 9, 9);
+}
+.map-fr{
+    margin: 15px;
+    border-radius: 15px;
+}
