@@ -16,13 +16,19 @@ import BookTickit from './components/BookTickit';
 function App() {
   const [from, setFrom] = useState("");
     const [to, setTo] = useState("");
+    const [selectedSeat, setSelectedSeat] = useState([])
+    const [busDetails,setBusDetails]= useState({});
   return (
     <div className="App">
       <JourneyContext.Provider value={{
         from:from,
         to:to,
         setFrom:setFrom,
-        setTo:setTo
+        setTo:setTo,
+        setSelectedSeat:setSelectedSeat,
+        selectedSeat:selectedSeat,
+        busDetails:busDetails,
+        setBusDetails:setBusDetails
       }}>
 
 
@@ -33,9 +39,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Journey Component={Home} />} />
           <Route path="/results" element={<Journey Component={SearchResult} />} />
-          <Route path="/book-seats" element={<Journey Component={SeatSelection } />} />
-          <Route path="/book-ticket" element={<Journey Component={BookTickit} />} />
-          {/* <BookTickit/> */}
+          <Route path="/book-seats" element={<Journey Component={SeatSelection }/>} />
+          <Route path="/book-ticket" element={<Journey Component={BookTickit}  />} />
         </Routes>
         
       </BrowserRouter>

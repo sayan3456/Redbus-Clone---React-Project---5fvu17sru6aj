@@ -48,3 +48,35 @@
   margin: 0px;
   cursor: pointer;
 }
+.seat{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+.bus-de{
+  background-color: antiquewhite;
+}
+.bus-d{
+  border: 2px solid rgb(223, 55, 55);
+  background-color: rgba(249, 255, 248, 0.662);
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 5px;
+}
+.bus-da{
+  height: 100px;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 10px;
+  background-color: rgb(163, 170, 176);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* border: 2px solid rgb(9, 9, 9); */
+
+}
+.bus-n{
+  color: rgb(10, 0, 0);
+}

@@ -9,6 +9,7 @@ import JourneyContext from "../context/JourneyContext";
 import { useContext } from "react";
 import { createPortal } from "react-dom";
 import SuggestionModal from "./suggestionModal"
+import "../styles/search.css"
 
 const Search = () => {
     const {from,to,setFrom,setTo}=useContext(JourneyContext);
@@ -16,6 +17,7 @@ const Search = () => {
     const [showSuggestion, setShowSuggestion] = useState(false);
     const [suggestionResult,setSuggestionResult] =useState(null);
     const [position, setPosition] = useState(null);
+    const [focusedInp, setfocusedInp] = useState("");
     const navigate=useNavigate();
     const fromInput = useRef(null);
     const toInput = useRef(null);
@@ -44,6 +46,7 @@ const Search = () => {
 
     useEffect(() => {
         console.log([from,null]);
+        setfocusedInp("from")
         const position = fromInput.current.getBoundingClientRect();
         setPosition(position)
         fetchData(from,"from").then(result => {
@@ -59,6 +62,7 @@ const Search = () => {
         const position = toInput.current.getBoundingClientRect();
         setPosition(position)
         console.log([null,to]);
+        setfocusedInp("to")
         fetchData(to,"to").then(result => {
             setSuggestionResult(result);
             if(result.length > 0){
@@ -88,36 +92,38 @@ const Search = () => {
         }
     }
     const hideSuggestions = () => {
-        setShowSuggestion(false);
+        setTimeout(()=> {
+            setShowSuggestion(false);
+        },500)
     }
     useEffect(() => {
         window.addEventListener("scroll", hideSuggestions,false);
         fromInput.current.addEventListener("focusout", hideSuggestions,false);
         toInput.current.addEventListener("focusout", hideSuggestions,false);
         return () => {
-            window.removeEventListener("scroll", hideSuggestions,false);
-            fromInput.current.removeEventListener("focusout", hideSuggestions,false);
-            toInput.current.removeEventListener("focusout", hideSuggestions,false);
+            window?.removeEventListener("scroll", hideSuggestions,false);
+            fromInput?.current?.removeEventListener("focusout", hideSuggestions,false);
+            toInput?.current?.removeEventListener("focusout", hideSuggestions,false);
         }
     },[])
     return (
         <Container>
-            {showSuggestion && createPortal(<SuggestionModal setFrom={setFrom} setTo={setTo} position={position} result={suggestionResult} />, document.getElementById("protalRoot"))}
+            {showSuggestion && createPortal(<SuggestionModal focusedInp={focusedInp} setFrom={setFrom} setTo={setTo} position={position} result={suggestionResult} />, document.getElementById("protalRoot"))}
             <div className="m-5">
-                <InputGroup className="mb-3 flex align-items-center">
-                    <Form.Control ref={fromInput} aria-label="Text input with drop down button" placeholder="From" value={from} onChange={(e) => {
+                <InputGroup className="mb-3 flex align-items-center map-sc">
+                    <Form.Control className="map-fr" ref={fromInput} aria-label="Text input with drop down button" placeholder="From" value={from} onChange={(e) => {
                         setFrom(e.target.value);
                     }} />
-                    <BsArrowLeftRight onClick={interChangeFromTo} className="mx-3" />
+                    <BsArrowLeftRight onClick={interChangeFromTo} className="mx-3 map" />
 
-                    <Form.Control ref={toInput} aria-label="Text input with drop down button" placeholder="To" value={to} onChange={(e) => {
+                    <Form.Control className="map-fr" ref={toInput} aria-label="Text input with drop down button" placeholder="To" value={to} onChange={(e) => {
                         setTo(e.target.value);
                     }} />
 
-                    <Form.Control type="date" aria-label="Text input with drop down button" placeholder="Date" value={journeyDate} onChange={(e) => {
+                    <Form.Control className="map-fr" type="date" aria-label="Text input with drop down button" placeholder="Date" value={journeyDate} onChange={(e) => {
                         setJourneyDate(e.target.value);
                     }} />
-                    <Button variant="danger" onClick={searchBuses}>Search Buses</Button>
+                    <Button className="map-fr" variant="danger" onClick={searchBuses}>Search Buses</Button>
                 </InputGroup>
             </div>
         </Container>

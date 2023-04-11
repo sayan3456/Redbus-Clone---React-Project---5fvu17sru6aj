@@ -26,8 +26,10 @@ const Journey=({Component})=> {
     <div>
          <Toaster />
       <RedBusNavbar />
-      {location.pathname === "/book-ticket" ? null : <Search />}
+      {location.pathname === "/book-ticket" || location.pathname === "/book-seats"  ? null : <Search />}
+      
         <Component />
+        {/* {location.pathname === "/book-seats" ? null : <Search />} */}
     </div>
   );
 }

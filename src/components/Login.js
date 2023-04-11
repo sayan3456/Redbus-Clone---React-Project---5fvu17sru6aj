@@ -18,7 +18,11 @@ const Login=()=> {
             toast.error("Username password are required");
         else
         {
-            localStorage.setItem("token","userToken");
+            const userCredentials = {
+                username: username.current.value,
+                password: password.current.value
+            }
+            localStorage.setItem("token",JSON.stringify(userCredentials));
             navigate("/");
         }
     }

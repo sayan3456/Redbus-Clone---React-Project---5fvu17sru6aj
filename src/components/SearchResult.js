@@ -34,7 +34,7 @@ const SearchResult = () => {
             fetchBuses();
         }, [from,to]
     );
-    if (isLoading) {
+   if (isLoading) {
         return <Spinner animation="border" variant="danger" />;
     }
 
@@ -56,16 +56,16 @@ const SearchResult = () => {
                 <h4 className="w-50">Sort By</h4>
                 <div className="d-flex justify-content-around w-100">
                     {["Departure", "Arrival", "Price"].map(
-                        (criteria) => {
-                            return <Button variant="danger" onClick={()=>{
+                        (criteria,index) => {
+                            return <Button key={'btn'+index} variant="danger" onClick={()=>{
                                 sortResults(criteria);
                             }}>{criteria}</Button>
                         }
                     )}
                 </div>
             </div>
-            {buses.map((bus) => {
-                return <BusResult bus={bus} />
+            {buses.map((bus,index) => {
+                return <BusResult key={'bus'+index} bus={bus} />
             }
             )}
         </div>
