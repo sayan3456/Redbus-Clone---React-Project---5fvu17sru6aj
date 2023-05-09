@@ -65,7 +65,7 @@ function BookTickit() {
         </div>
       )}
       <div className="main">
-        <h1 id="redbus_logo">
+        <h1 id="redbus_logo" onClick={() => {setFrom("");setTo("");setSelectedSeat([]);navigate("/");}}>
           Red<span>Bus</span>
         </h1>
         <h1 id="payheading">PAYMENT</h1>

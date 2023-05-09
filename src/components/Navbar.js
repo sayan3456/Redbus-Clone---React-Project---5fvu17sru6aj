@@ -20,16 +20,19 @@ function RedBusNavbar() {
     setUserName(null)
     navigate("/login");
   }
+  const png ={
+    cursor:"pointer",
+  };
   return (
     <Navbar collapseOnSelect expand="lg" bg="danger" variant="dark">
       <Container>
-        <Image src="https://www.redbus.in/i/59538b35953097248522a65b4b79650e.png" />
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Image onClick={() => { navigate("/");}} src="https://www.redbus.in/i/59538b35953097248522a65b4b79650e.png" alt='logo' style={png} />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#features" className='ms-2'>Bus Tickets</Nav.Link>
             {/* <Nav.Link href="#pricing">Pricing</Nav.Link>
             */}
+            {/* onClick={()=>{navigate("/show-ticket")}} */}
           </Nav>
           <Nav>
           <NavDropdown title={<FaUser />} id="collasible-nav-dropdown">

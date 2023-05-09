@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Toaster } from 'react-hot-toast';
 import { useNavigate,useLocation,matchRoutes  } from 'react-router-dom';
 import JourneyContext from '../context/JourneyContext';
@@ -10,25 +10,30 @@ const Journey=({Component})=> {
   const location = useLocation()
   console.log("look here",location);
   const {from,to}=useContext(JourneyContext);
+  const [redirect, setRedirect] = useState(true);
   useEffect(
     ()=>
     {
         
-        if(!localStorage.getItem("token"))
-            navigate("/login");
+        if(!localStorage.getItem("token")) {
+          console.log('redirecting to login');
+          navigate("/login");
+
+        }
         else if(!from||!to)
         {
-            navigate("/");
+            setRedirect(false);
+            // navigate("/");
         }
     },[]
   )
   return (
-    <div>
-         <Toaster />
-      <RedBusNavbar />
-      {location.pathname === "/book-ticket" || location.pathname === "/book-seats"  ? null : <Search />}
-      
-        <Component />
+      !redirect &&
+      <div>
+          <Toaster />
+          <RedBusNavbar />
+            {location.pathname === "/book-ticket" || location.pathname === "/book-seats"  ? null : <Search />}
+          <Component />
         {/* {location.pathname === "/book-seats" ? null : <Search />} */}
     </div>
   );

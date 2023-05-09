@@ -12,6 +12,7 @@ import SeatSelection from './components/SeatSelection';
 import Journey from './components/Journey';
 import Login from './components/Login';
 import BookTickit from './components/BookTickit';
+import showTickit from './components/showTickit';
 
 function App() {
   const [from, setFrom] = useState("");
@@ -38,6 +39,7 @@ function App() {
 
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Journey Component={Home} />} />
+          <Route path="/show-ticket" element={<Journey Component={showTickit} />} />
           <Route path="/results" element={<Journey Component={SearchResult} />} />
           <Route path="/book-seats" element={<Journey Component={SeatSelection }/>} />
           <Route path="/book-ticket" element={<Journey Component={BookTickit}  />} />
