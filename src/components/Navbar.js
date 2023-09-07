@@ -13,12 +13,18 @@ function RedBusNavbar() {
   useEffect(() => {
     let value = window.localStorage.getItem("token");
     value = JSON.parse(value);
-    setUserName(value.username);
+    
+    if(value==null|| value.username==null){
+      setUserName("user");
+    }else{
+      setUserName(value.username);
+    }
+    
   },[])
   const logout = () => {
     window.localStorage.removeItem("token");
     setUserName(null)
-    // navigate("/");
+    navigate("/");
   }
   const png ={
     cursor:"pointer",
