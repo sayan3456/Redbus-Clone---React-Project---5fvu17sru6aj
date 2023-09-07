@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Redbus-Clone---React-Project---5fvu17sru6aj/static/css/main.c15ed2ce.css",
+    "main.js": "/Redbus-Clone---React-Project---5fvu17sru6aj/static/js/main.625f9a78.js",
+    "static/js/787.a0227d82.chunk.js": "/Redbus-Clone---React-Project---5fvu17sru6aj/static/js/787.a0227d82.chunk.js",
+    "static/media/Untitled design (2).jpg": "/Redbus-Clone---React-Project---5fvu17sru6aj/static/media/Untitled design (2).c973ae8d9904fc6ca6b0.jpg",
+    "static/media/png-removebg-preview.png": "/Redbus-Clone---React-Project---5fvu17sru6aj/static/media/png-removebg-preview.7da2b851c0fb74bb88a9.png",
+    "static/media/webreferal.png": "/Redbus-Clone---React-Project---5fvu17sru6aj/static/media/webreferal.a2773886dbe18167c985.png",
+    "index.html": "/Redbus-Clone---React-Project---5fvu17sru6aj/index.html",
+    "main.c15ed2ce.css.map": "/Redbus-Clone---React-Project---5fvu17sru6aj/static/css/main.c15ed2ce.css.map",
+    "main.625f9a78.js.map": "/Redbus-Clone---React-Project---5fvu17sru6aj/static/js/main.625f9a78.js.map",
+    "787.a0227d82.chunk.js.map": "/Redbus-Clone---React-Project---5fvu17sru6aj/static/js/787.a0227d82.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c15ed2ce.css",
+    "static/js/main.625f9a78.js"
+  ]
+}
