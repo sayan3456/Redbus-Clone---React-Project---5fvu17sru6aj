@@ -6,10 +6,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Img from "../image/webreferal.png";
 import Img1 from '../image/Untitled design (2).jpg';
 import "../styles/home.css";
+import RedBusNavbar from "./Navbar";
+import Search from "./Search";
 const Home = () => {
   return (
     // <div className="model_section">
+    
       <div className="section">
+         {/* <RedBusNavbar/> */}
+       {/* <Search/> */}
     <div className="row row-cols-1 row-cols-md-3 g-4 section_1">
       <div className="model_section">
         <div className="col">
