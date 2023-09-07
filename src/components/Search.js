@@ -107,7 +107,8 @@ const Search = () => {
         }
     },[])
     return (
-        <Container>
+        <div className="model">
+        <Container >
             {showSuggestion && createPortal(<SuggestionModal focusedInp={focusedInp} setFrom={setFrom} setTo={setTo} position={position} result={suggestionResult} />, document.getElementById("protalRoot"))}
             <div className="m-5">
                 <InputGroup className="mb-3 flex align-items-center map-sc">
@@ -127,6 +128,7 @@ const Search = () => {
                 </InputGroup>
             </div>
         </Container>
+        </div>
     );
 };
 

@@ -18,7 +18,7 @@ function RedBusNavbar() {
   const logout = () => {
     window.localStorage.removeItem("token");
     setUserName(null)
-    navigate("/login");
+    // navigate("/");
   }
   const png ={
     cursor:"pointer",

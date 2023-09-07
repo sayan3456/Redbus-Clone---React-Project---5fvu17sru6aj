@@ -1,4 +1,4 @@
-#redbus_logo{
+/* #redbus_logo{
   border: 0.4vw solid red;
   color: red;
   margin: 2vw auto;
@@ -9,34 +9,47 @@
 #redbus_logo span{
   background-color: red;
   color: #fff;
-}
+} */
 #payheading{
-  background-color: #000;
+  /* background-color: #000000; */
     border: 0.2vw solid #000;
-    color: #fff;
+    border-radius: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #000000;
     margin: 2vw auto;
     text-align: center;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    background-color: rgb(221, 216, 210);
 }
-#detailsandpaycontainer{
+/* #detailsandpaycontainer{
   grid-gap: 1vw;
     display: grid;
     gap: 1vw;
     grid-template-columns: 1fr 1fr;
     margin: 6vw auto;
     width: 60vw;
+} */
+#detailsandpaycontainer{
+  width: 50%;
+  height: 500px;
+  margin-left: 25%;
 }
-.detailsandpay {
-  background-color: red;
+.detailsandpay_details {
+  background-color: rgb(149, 49, 49);
   font-size: 1vw;
   font-weight: 600;
+  height: 50vh;
+  border-radius: 15px;
 }
 .pt {
   margin-top: 15px;
   background-image: linear-gradient(90deg,#fff,gray);
   text-align: center;
+  border-radius: 15px;
 }
 .details-item {
   background-color: #fff;
@@ -44,6 +57,7 @@
   justify-content: space-between;
   margin: 1vw;
   padding: 1vw 2vw;
+  border-radius: 15px;
 }
 .pay div {
   margin: 0.5vw auto;
@@ -56,12 +70,18 @@
 .pay div label,input{
   width: 15vw;
 }
-.pay button {
-  display: block;
-  margin: auto;
-  width: 8vw;
-  margin-bottom: 10px;
+.button-3{
+  width :9em ;
+  height:3em;
+  background-color: rgb(24, 131, 3);
+  color: black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  border-style: none;
+  border-radius: 15px;
 }
-/* .success{
-   border-radius: 10px;
-} */
+.button-3:hover{
+  cursor:pointer;
+  background-color:#55ab30;
+}

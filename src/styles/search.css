@@ -1,3 +1,9 @@
+/* .model{
+    background-image:url("../image/Untitled\ design\ \(1\).jpg");
+    background-repeat: no-repeat;
+    background-size:100% 200px ;
+} */
+
 .map{
     background-color: rgb(232, 84, 84);
     width: 35px;
@@ -16,6 +22,7 @@
 .map-fr{
     margin: 15px;
     border-radius: 15px;
+    height: 8vh;
 }
 BsArrowLeftRight{
     border-radius: 50%;

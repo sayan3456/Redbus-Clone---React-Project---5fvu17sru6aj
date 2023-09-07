@@ -89,7 +89,7 @@ const SeatSelection = () => {
                     );
                 })
                 }
-                {selectedSeat.length? <Button onClick={() => navigate("/book-ticket")} variant="success">Book Tickets</Button>:""}
+                 <Button onClick={() => navigate("/book-ticket")} className='button_2' variant="success">Book Tickets</Button>
             </Container>
         </div>
     )

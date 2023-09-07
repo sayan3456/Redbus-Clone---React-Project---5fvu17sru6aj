@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+background-color: lightgray;
+  /* background-image: url("./image/Untitled\ design\ \(1\).jpg"); */
+  /* background-size:100% 300px ; */
+  /* background: no-repeat; */
 }
 
 .App-logo {

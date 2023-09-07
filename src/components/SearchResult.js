@@ -51,10 +51,10 @@ const SearchResult = () => {
         }
     }
     return (
-        <div className="bg-danger p-2 d-flex flex-column">
-            <div className="bg-white p-2 d-flex w-75 align-self-center">
-                <h4 className="w-50">Sort By</h4>
-                <div className="d-flex justify-content-around w-100">
+        <div className="bg-danger p-4 d-flex flex-column">
+            <div className="bg-white p-3 d-flex w-100 align-self-center">
+                <h4 className="w-25">Sort By</h4>
+                <div className="d-flex justify-content-around w-75">
                     {["Departure", "Arrival", "Price"].map(
                         (criteria,index) => {
                             return <Button key={'btn'+index} variant="danger" onClick={()=>{

@@ -1,17 +1,26 @@
 .seat{  
     text-align: center; 
-    background-color: rgb(255, 255, 255);
     border: solid 3px black;
     width:50px !important;
     height:50px;
-    border-radius: 10px;
+    border-radius: 50%;
     margin-right: 30px;
     cursor: pointer;
+    color: beige;
+    background-color: black;
 }
 .row{
-    background-color: white;
+    background-color: lightgrey;
 }
 .background{
-    border: 45px solid rgb(197, 51, 51);
-    border-radius: 5px ;
+    border: 35px solid rgb(197, 51, 51);
+    border-radius: 15px ;
+}
+.button_2{
+    margin-bottom: 20px;
+    width : auto;
+    height: 6vh;
+    background-color: rgb(10, 95, 10);
+    color: wheat;
+    font-size: 20px;
 }
